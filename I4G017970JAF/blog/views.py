@@ -9,6 +9,7 @@ from django.urls import reverse_lazy # new
 
 class PostListView(ListView):
     model = Post
+    template_name = 'home.html'
 
 class PostCreateView(CreateView):
     model = Post

@@ -31,7 +31,7 @@ class Post(models.Model):
     )
 
     class Meta:
-        ordering = ("-publish",)
+        ordering = ('-publish',)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
@@ -42,4 +42,4 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("blog:post_detail", kwargs={"slug": self.slug})
+        return reverse('blog:post_detail', kwargs={'slug': self.slug})
